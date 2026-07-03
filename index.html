@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WABI.NAILS — Салон осознанного ухода за ногтями</title>
+  <meta name="description" content="Японский эко-маникюр и спа-ритуалы в эстетике Ваби-Саби. Естественная красота ваших ногтей.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">WABI.NAILS</a>
+      <nav class="header__nav">
+        <a href="#services" class="header__link">Услуги</a>
+        <a href="#masters" class="header__link">Мастера</a>
+        <a href="#gallery" class="header__link">Галерея</a>
+        <a href="#booking" class="header__link">Запись</a>
+      </nav>
+      <a href="#booking" class="header__btn btn">Записаться</a>
+    </div>
+  </header>
+  
+  <main class="main">
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <span class="hero__subtitle">Японский эко-маникюр & спа</span>
+          <h1 class="hero__title">Красота в простоте и несовершенстве</h1>
+          <p class="hero__desc">Осознанный уход за ногтями, раскрывающий их природное здоровье. Спокойствие, забота и экологичные ритуалы.</p>
+          <div class="hero__actions">
+            <a href="#services" class="btn btn--accent hero__btn">Посмотреть услуги</a>
+            <a href="#booking" class="btn btn--outline hero__btn">Онлайн-запись</a>
+          </div>
+        </div>
+        <div class="hero__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800&h=600" alt="Эстетика Ваби-Саби" class="hero__image">
+        </div>
+      </div>
+    </section>
+    
+    <section class="philosophy" id="philosophy">
+      <div class="philosophy__container">
+        <h2 class="philosophy__title section-title">Философия Ваби-Саби</h2>
+        <p class="philosophy__subtitle section-subtitle">Через осознанное отношение к деталям мы находим гармонию</p>
+        <div class="philosophy__grid">
+          <article class="philosophy-card">
+            <h3 class="philosophy-card__title">Естественность</h3>
+            <p class="philosophy-card__text">Мы не маскируем недостатки толстым слоем пластикового геля. Наша цель — укрепить ногтевую пластину и подчеркнуть ее натуральную текстуру и блеск.</p>
+          </article>
+          <article class="philosophy-card">
+            <h3 class="philosophy-card__title">Природные компоненты</h3>
+            <p class="philosophy-card__text">Все наши спа-ритуалы проводятся с использованием натуральных масел холодного отжима, эфирных экстрактов, минеральных паст и пудры из пчелиного воска.</p>
+          </article>
+          <article class="philosophy-card">
+            <h3 class="philosophy-card__title">Атмосфера тишины</h3>
+            <p class="philosophy-card__text">WABI.NAILS — это пространство замедления. У нас нет громких разговоров и яркого искусственного света. Только покой, ароматерапия и чайная церемония.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="services" id="services">
+      <div class="services__container">
+        <h2 class="services__title section-title">Меню ритуалов</h2>
+        <p class="services__subtitle section-subtitle">Бережный уход и восстановление здоровья ваших рук и ног</p>
+        
+        <div class="services__tabs">
+          <button class="services__tab services__tab--active" data-category="manicure">Маникюр</button>
+          <button class="services__tab" data-category="pedicure">Педикюр</button>
+          <button class="services__tab" data-category="spa">Спа-уход</button>
+        </div>
+        
+        <div class="services__grid">
+          <!-- Маникюр -->
+          <div class="service-card" data-category="manicure" data-id="m1" data-name="Японский эко-маникюр Masura" data-price="2400">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Японский эко-маникюр Masura</h3>
+              <p class="service-card__desc">Глубокое оздоровление ногтевой пластины с помощью минеральной пасты с жемчужной крошкой и полировки пчелиным воском. Возвращает ногтям естественный блеск.</p>
+            </div>
+            <div class="service-card__footer">
+              <span class="service-card__price">2 400 ₽</span>
+              <button class="service-card__btn btn btn--outline" data-id="m1" data-name="Японский эко-маникюр Masura" data-price="2400" onclick="addServiceFromPrice(this)">Добавить к записи</button>
+            </div>
+          </div>
+          
+          <div class="service-card" data-category="manicure" data-id="m2" data-name="Пилочный атравматичный маникюр" data-price="2000">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Пилочный атравматичный маникюр</h3>
+              <p class="service-card__desc">Деликатная обработка кутикулы и придание формы исключительно с помощью специальных пилок без размачивания и режущих инструментов.</p>
+            </div>
+            <div class="service-card__footer">
+              <span class="service-card__price">2 000 ₽</span>
+              <button class="service-card__btn btn btn--outline" data-id="m2" data-name="Пилочный атравматичный маникюр" data-price="2000" onclick="addServiceFromPrice(this)">Добавить к записи</button>
+            </div>
+          </div>
+          
+          <!-- Педикюр -->
+          <div class="service-card" data-category="pedicure" data-id="p1" data-name="Японский эко-педикюр" data-price="3600" style="display: none;">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Японский эко-педикюр</h3>
+              <p class="service-card__desc">Экологичная обработка стоп и пальцев с минеральным запечатыванием ногтей, питанием маслом арганы и легким массажем бамбуковыми палочками.</p>
+            </div>
+            <div class="service-card__footer">
+              <span class="service-card__price">3 600 ₽</span>
+              <button class="service-card__btn btn btn--outline" data-id="p1" data-name="Японский эко-педикюр" data-price="3600" onclick="addServiceFromPrice(this)">Добавить к записи</button>
+            </div>
+          </div>
+          
+          <div class="service-card" data-category="pedicure" data-id="p2" data-name="Аппаратный дзен-педикюр" data-price="3200" style="display: none;">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Аппаратный дзен-педикюр</h3>
+              <p class="service-card__desc">Безопасная обработка стоп с использованием профессионального аппарата, пилинга с экстрактом зеленого чая и глубокого увлажнения.</p>
+            </div>
+            <div class="service-card__footer">
+              <span class="service-card__price">3 200 ₽</span>
+              <button class="service-card__btn btn btn--outline" data-id="p2" data-name="Аппаратный дзен-педикюр" data-price="3200" onclick="addServiceFromPrice(this)">Добавить к записи</button>
+            </div>
+          </div>
+          
+          <!-- Спа-уход -->
+          <div class="service-card" data-category="spa" data-id="s1" data-name="Спа-ритуалы «Горячий масляный компресс»" data-price="1800" style="display: none;">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Спа-ритуал «Горячий масляный компресс»</h3>
+              <p class="service-card__desc">Массаж рук теплыми мешочками с травами, компресс из подогретого масла рисовых отрубей и кунжута для сухой кожи.</p>
+            </div>
+            <div class="service-card__footer">
+              <span class="service-card__price">1 800 ₽</span>
+              <button class="service-card__btn btn btn--outline" data-id="s1" data-name="Спа-ритуал «Горячий масляный компресс»" data-price="1800" onclick="addServiceFromPrice(this)">Добавить к записи</button>
+            </div>
+          </div>
+          
+          <div class="service-card" data-category="spa" data-id="s2" data-name="Минеральная маска с белой глиной" data-price="1500" style="display: none;">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Минеральная маска с белой глиной</h3>
+              <p class="service-card__desc">Маска из натуральной японской глины для осветления кожи рук, детоксикации и разглаживания мелких морщинок.</p>
+            </div>
+            <div class="service-card__footer">
+              <span class="service-card__price">1 500 ₽</span>
+              <button class="service-card__btn btn btn--outline" data-id="s2" data-name="Минеральная маска с белой глиной" data-price="1500" onclick="addServiceFromPrice(this)">Добавить к записи</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="masters" id="masters">
+      <div class="masters__container">
+        <h2 class="masters__title section-title">Мастера дзен-ухода</h2>
+        <p class="masters__subtitle section-subtitle">Проводники в мир спокойствия и естественной красоты ногтей</p>
+        
+        <div class="masters__grid">
+          <article class="master-card">
+            <div class="master-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300&h=300" alt="Мастер Харуто" class="master-card__image">
+            </div>
+            <h3 class="master-card__name">Харуто</h3>
+            <span class="master-card__role">Специалист по японскому эко-маникюру</span>
+            <p class="master-card__bio">Практикует восстановление ногтевой пластины по традиционным методикам более 6 лет. Считает уход за руками формой медитации.</p>
+          </article>
+          
+          <article class="master-card">
+            <div class="master-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300&h=300" alt="Мастер Акико" class="master-card__image">
+            </div>
+            <h3 class="master-card__name">Акико</h3>
+            <span class="master-card__role">Мастер художественной росписи</span>
+            <p class="master-card__bio">Создает минималистичные акварельные дизайны в стиле ботаники и японской графики. Каждая ее работа уникальна.</p>
+          </article>
+          
+          <article class="master-card">
+            <div class="master-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300&h=300" alt="Мастер Мэй" class="master-card__image">
+            </div>
+            <h3 class="master-card__name">Мэй</h3>
+            <span class="master-card__role">Эксперт по спа-ритуалам и восстановлению</span>
+            <p class="master-card__bio">Специализируется на массажах горячими мешочками с травами и глубоком восстановлении кожи с сухой кутикулой.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="gallery" id="gallery">
+      <div class="gallery__container">
+        <h2 class="gallery__title section-title">Эстетика в деталях</h2>
+        <p class="gallery__subtitle section-subtitle">Оцените результаты лечебного ухода и вдохновитесь нашими работами</p>
+        
+        <!-- Before / After Drag Slider -->
+        <div class="gallery__slider-wrapper">
+          <h3 class="gallery__slider-title">Трансформация ногтей: Японский уход</h3>
+          <div class="ba-slider">
+            <div class="ba-slider__img ba-slider__img--before">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800&h=600" alt="До ухода">
+              <div class="ba-slider__label ba-slider__label--before">До ритуала</div>
+            </div>
+            <div class="ba-slider__img ba-slider__img--after">
+              <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&q=80&w=800&h=600" alt="После ухода">
+              <div class="ba-slider__label ba-slider__label--after">После</div>
+            </div>
+            <div class="ba-slider__handle">
+              <div class="ba-slider__handle-line"></div>
+              <div class="ba-slider__handle-button">
+                <span class="ba-slider__handle-arrow ba-slider__handle-arrow--left"></span>
+                <span class="ba-slider__handle-arrow ba-slider__handle-arrow--right"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Standard Works Grid -->
+        <div class="gallery__grid">
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=500" alt="Минималистичный дизайн" class="gallery__image">
+            <div class="gallery__overlay">
+              <span class="gallery__work-title">Эко-дизайн «Свежая зелень»</span>
+              <span class="gallery__work-master">Акико</span>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=500" alt="Японский маникюр" class="gallery__image">
+            <div class="gallery__overlay">
+              <span class="gallery__work-title">Глубокое запечатывание Masura</span>
+              <span class="gallery__work-master">Харуто</span>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&q=80&w=500" alt="Матовый дзен" class="gallery__image">
+            <div class="gallery__overlay">
+              <span class="gallery__work-title">Асимметричный дзен</span>
+              <span class="gallery__work-master">Акико</span>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=500" alt="Спа-педикюр" class="gallery__image">
+            <div class="gallery__overlay">
+              <span class="gallery__work-title">Эко-педикюр & Питание</span>
+              <span class="gallery__work-master">Мэй</span>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&q=80&w=500" alt="Абстрактный дизайн" class="gallery__image">
+            <div class="gallery__overlay">
+              <span class="gallery__work-title">Текстура жидкого камня</span>
+              <span class="gallery__work-master">Акико</span>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=500" alt="Натуральная полировка" class="gallery__image">
+            <div class="gallery__overlay">
+              <span class="gallery__work-title">Натуральный жемчужный блеск</span>
+              <span class="gallery__work-master">Харуто</span>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <section class="booking" id="booking">
+      <div class="booking__container">
+        <h2 class="booking__title section-title">Онлайн-запись</h2>
+        <p class="booking__subtitle section-subtitle">Выберите ритуалы, мастера и удобное время для визита</p>
+        
+        <!-- Booking Draft Info Panel (if loaded from localStorage) -->
+        <div class="booking__active-panel" id="booking-active-panel" style="display: none;">
+          <div class="active-booking">
+            <h3 class="active-booking__title">Ваш запланированный визит</h3>
+            <div class="active-booking__details">
+              <p><strong>Услуги:</strong> <span id="active-booking-services">-</span></p>
+              <p><strong>Мастер:</strong> <span id="active-booking-master">-</span></p>
+              <p><strong>Дата и время:</strong> <span id="active-booking-datetime">-</span></p>
+              <p><strong>Стоимость:</strong> <span id="active-booking-total">-</span></p>
+            </div>
+            <button class="active-booking__cancel btn btn--outline" onclick="cancelCurrentBooking()">Отменить запись</button>
+          </div>
+        </div>
+ 
+        <!-- Main Booking Flow Widget -->
+        <div class="booking-widget" id="booking-flow-widget">
+          <div class="booking-widget__steps-header">
+            <div class="booking-step-indicator booking-step-indicator--active" data-step="1">1. Услуги</div>
+            <div class="booking-step-indicator" data-step="2">2. Мастер</div>
+            <div class="booking-step-indicator" data-step="3">3. Время</div>
+            <div class="booking-step-indicator" data-step="4">4. Контакты</div>
+          </div>
+          
+          <div class="booking-widget__steps-content">
+            <!-- Step 1: Services Selection -->
+            <div class="booking-widget__step booking-widget__step--active" data-step="1">
+              <h3 class="booking-widget__step-title">Выбранные услуги</h3>
+              <div class="selected-services-list" id="selected-services-list">
+                <p class="selected-services-list__empty">Вы еще не добавили ни одного ритуала. Выберите услуги выше в меню или нажмите кнопку ниже.</p>
+              </div>
+              <div class="booking-widget__step-footer">
+                <div class="booking-widget__total">
+                  Итого: <span id="booking-step1-total">0 ₽</span>
+                </div>
+                <button class="btn btn--accent" id="btn-next-to-master" disabled onclick="goToStep(2)">Выбрать мастера</button>
+              </div>
+            </div>
+            
+            <!-- Step 2: Master Selection -->
+            <div class="booking-widget__step" data-step="2">
+              <h3 class="booking-widget__step-title">Выберите мастера</h3>
+              <div class="masters-select-grid">
+                <label class="master-select-card">
+                  <input type="radio" name="booking-master" value="Харуто" class="master-select-card__input" onchange="selectMaster('Харуто')">
+                  <div class="master-select-card__body">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300&h=300" alt="Харуто" class="master-select-card__image">
+                    <h4 class="master-select-card__name">Харуто</h4>
+                    <span class="master-select-card__role">Японский эко-маникюр</span>
+                  </div>
+                </label>
+                
+                <label class="master-select-card">
+                  <input type="radio" name="booking-master" value="Акико" class="master-select-card__input" onchange="selectMaster('Акико')">
+                  <div class="master-select-card__body">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300&h=300" alt="Акико" class="master-select-card__image">
+                    <h4 class="master-select-card__name">Акико</h4>
+                    <span class="master-select-card__role">Арт-дизайны</span>
+                  </div>
+                </label>
+                
+                <label class="master-select-card">
+                  <input type="radio" name="booking-master" value="Мэй" class="master-select-card__input" onchange="selectMaster('Мэй')">
+                  <div class="master-select-card__body">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300&h=300" alt="Мэй" class="master-select-card__image">
+                    <h4 class="master-select-card__name">Мэй</h4>
+                    <span class="master-select-card__role">Спа-ритуалы</span>
+                  </div>
+                </label>
+                
+                <label class="master-select-card">
+                  <input type="radio" name="booking-master" value="Любой мастер" class="master-select-card__input" onchange="selectMaster('Любой мастер')">
+                  <div class="master-select-card__body">
+                    <div class="master-select-card__any-avatar">?</div>
+                    <h4 class="master-select-card__name">Любой мастер</h4>
+                    <span class="master-select-card__role">Ближайшее время</span>
+                  </div>
+                </label>
+              </div>
+              <div class="booking-widget__step-footer">
+                <button class="btn btn--outline" onclick="goToStep(1)">Назад</button>
+                <button class="btn btn--accent" id="btn-next-to-datetime" disabled onclick="goToStep(3)">Выбрать дату и время</button>
+              </div>
+            </div>
+            
+            <!-- Step 3: Date & Time Selection -->
+            <div class="booking-widget__step" data-step="3">
+              <h3 class="booking-widget__step-title">Выберите дату и время</h3>
+              <div class="datetime-picker">
+                <!-- Dynamic Calendar -->
+                <div class="calendar-wrapper">
+                  <div class="calendar-header">
+                    <button class="calendar-prev-btn" onclick="prevMonth()">&lt;</button>
+                    <span class="calendar-month-year" id="calendar-month-year">Июль 2026</span>
+                    <button class="calendar-next-btn" onclick="nextMonth()">&gt;</button>
+                  </div>
+                  <div class="calendar-weekdays">
+                    <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+                  </div>
+                  <div class="calendar-days" id="calendar-days-grid">
+                    <!-- Days will be generated by JS -->
+                  </div>
+                </div>
+                
+                <!-- Time Slots -->
+                <div class="slots-wrapper">
+                  <h4 class="slots-title" id="selected-date-label">Свободное время:</h4>
+                  <div class="slots-grid" id="time-slots-grid">
+                    <button class="time-slot" onclick="selectTimeSlot('10:00')">10:00</button>
+                    <button class="time-slot" onclick="selectTimeSlot('12:00')">12:00</button>
+                    <button class="time-slot" onclick="selectTimeSlot('14:00')">14:00</button>
+                    <button class="time-slot" onclick="selectTimeSlot('16:00')">16:00</button>
+                    <button class="time-slot" onclick="selectTimeSlot('18:00')">18:00</button>
+                    <button class="time-slot" onclick="selectTimeSlot('20:00')">20:00</button>
+                  </div>
+                  <p class="slots-hint" id="slots-hint-msg">Пожалуйста, сначала выберите дату на календаре</p>
+                </div>
+              </div>
+              <div class="booking-widget__step-footer">
+                <button class="btn btn--outline" onclick="goToStep(2)">Назад</button>
+                <button class="btn btn--accent" id="btn-next-to-contacts" disabled onclick="goToStep(4)">Ввести данные</button>
+              </div>
+            </div>
+            
+            <!-- Step 4: Client Info & Submit -->
+            <div class="booking-widget__step" data-step="4">
+              <h3 class="booking-widget__step-title">Подтверждение записи</h3>
+              <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
+                <div class="booking-form__group">
+                  <label for="client-name" class="booking-form__label">Ваше имя *</label>
+                  <input type="text" id="client-name" class="booking-form__input" required placeholder="Введите имя">
+                </div>
+                <div class="booking-form__group">
+                  <label for="client-phone" class="booking-form__label">Телефон *</label>
+                  <input type="tel" id="client-phone" class="booking-form__input" required placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="booking-form__group">
+                  <label for="client-comment" class="booking-form__label">Комментарий (необязательно)</label>
+                  <textarea id="client-comment" class="booking-form__input booking-form__input--textarea" placeholder="Ваши пожелания к визиту..."></textarea>
+                </div>
+                <div class="booking-widget__validation-error" id="booking-validation-error" style="display: none;"></div>
+                <div class="booking-widget__step-footer">
+                  <button type="button" class="btn btn--outline" onclick="goToStep(3)">Назад</button>
+                  <button type="submit" class="btn btn--accent">Подтвердить запись</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer" id="contacts">
+    <div class="footer__container">
+      <div class="footer__grid">
+        <div class="footer__contacts">
+          <h3 class="footer__logo">WABI.NAILS</h3>
+          <p class="footer__desc">Пространство осознанной заботы о себе. Мы помогаем подчеркнуть естественную красоту ваших ногтей через бережный эко-уход и расслабляющие спа-ритуалы.</p>
+          <div class="footer__info-list">
+            <div class="footer__info-item">
+              <svg class="footer__icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>г. Москва, ул. Арбат, 12, стр. 1</span>
+            </div>
+            <div class="footer__info-item">
+              <svg class="footer__icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+79991234567" class="footer__link-contact">+7 (999) 123-45-67</a>
+            </div>
+            <div class="footer__info-item">
+              <svg class="footer__icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Ежедневно: 10:00 — 22:00</span>
+            </div>
+          </div>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.13 2.82a1.6 1.6 0 0 0-1.63-.09L2.83 11.38a1.6 1.6 0 0 0-.1 2.91l5 2.16 2.38 7.08a1.6 1.6 0 0 0 2.81.42l3.41-4.8 5 3.65A1.6 1.6 0 0 0 22 21.46L22 4.45a1.6 1.6 0 0 0-.87-1.63z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__map-wrapper">
+          <div class="footer__map-placeholder">
+            <div class="footer__map-pin"></div>
+            <span class="footer__map-text">Метро Арбатская • 5 минут пешком</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 WABI.NAILS. Все права защищены.</p>
+        <p class="footer__portfolio-credits">Сайт разработан в демонстрационных целях для портфолио.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
